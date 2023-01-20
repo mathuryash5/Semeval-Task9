@@ -37,7 +37,7 @@ def kfold_stratified_sampling(X_train, y_train, X_test, y_test, epochs=1,
 						  "valid": {"X": X_train_cpy.loc[valid]["document"], "y": y_valid_cpy}}
 		ia_datasets = dataset.get_datasets(split_datasets)
 		dataloader = dataloaders.get_dataloaders(ia_datasets, train_batch_size, eval_batch_size)
-		# trainer.train_and_save(dataloader, fold, epochs, device)
+		trainer.train_and_save(dataloader, fold, epochs, device)
 		pearson_r = evaluator.eval_score(fold, dataloader, "valid", device)
 		if pearson_r > max_pearson_r:
 			max_pearson_r = pearson_r
