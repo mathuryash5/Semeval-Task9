@@ -727,7 +727,7 @@ def train_and_save(variant_name):
 
 """Train, save each version of the fine tuned model."""
 
-for name in [TWEET, REDDIT, COMBINED]:
+for name in [TWEET]:
 	train_and_save(name)
 
 """## Evaluation
@@ -803,14 +803,14 @@ def eval_score(train_name, test_name):
 """Evaluate each dataset's test split on the same dataset's train split and the other dataset's train split."""
 
 eval_score(TWEET, TWEET)
-eval_score(TWEET, REDDIT)
-eval_score(TWEET, COMBINED)
-eval_score(REDDIT, TWEET)
-eval_score(REDDIT, REDDIT)
-eval_score(REDDIT, COMBINED)
-eval_score(COMBINED, TWEET)
-eval_score(COMBINED, REDDIT)
-eval_score(COMBINED, COMBINED)
+# eval_score(TWEET, REDDIT)
+# eval_score(TWEET, COMBINED)
+# eval_score(REDDIT, TWEET)
+# eval_score(REDDIT, REDDIT)
+# eval_score(REDDIT, COMBINED)
+# eval_score(COMBINED, TWEET)
+# eval_score(COMBINED, REDDIT)
+# eval_score(COMBINED, COMBINED)
 
 """## Base Line
 
