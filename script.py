@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-TRAIN_BATCH_SIZE = 64
-EVAL_BATCH_SIZE = 64
+TRAIN_BATCH_SIZE = 32
+EVAL_BATCH_SIZE = 32
 MAX_EPOCHS=1
 """Tweet-Intimacy-Analysis.ipynb
 
