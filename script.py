@@ -311,8 +311,8 @@ import os
 from os import path
 #
 # os.chdir('/content/drive/MyDrive')
-if not path.exists('/download_models'):
-	os.mkdir('/download_models')
+if not path.exists('download_models'):
+	os.mkdir('download_models')
 
 """### Define the datasets
 
